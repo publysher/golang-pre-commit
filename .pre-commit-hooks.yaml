@@ -1,0 +1,23 @@
+- id: go-fmt
+  name: "go fmt"
+  description: "Runs go fmt on all project files"
+  language: system
+  types:
+    - go
+  entry: "gofmt -w -s"
+
+- id: go-vet
+  name: go vet
+  types:
+    - go
+  language: system
+  entry: 'go vet ./...'
+  pass_filenames: false
+
+- id: go-test
+  name: go test
+  types:
+    - go
+  language: system
+  entry: 'go test -short ./...'
+  pass_filenames: false
